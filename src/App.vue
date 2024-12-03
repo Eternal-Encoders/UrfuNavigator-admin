@@ -1,30 +1,30 @@
 <script setup lang="ts">
-import HelloWorld from './components/HelloWorld.vue'
+import Header from "./components/Header.vue";
+import { RouterView } from "vue-router";
+import { ref } from "vue";
+
+const isDev = ref(true ? "Тестовый": "Продкашен");
 </script>
 
 <template>
-  <div>
-    <a href="https://vite.dev" target="_blank">
-      <img src="/vite.svg" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://vuejs.org/" target="_blank">
-      <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
-    </a>
-  </div>
-  <HelloWorld msg="Vite + Vue" />
-</template>
+  <v-layout class="rounded rounded-md">
+    <v-navigation-drawer>
+      <v-list>
+        <v-list-item>
+          <v-card
+            :title=isDev.toUpperCase()
+            variant="tonal"
+            class="text-center"
+          />
+        </v-list-item>
+      </v-list>
+    </v-navigation-drawer>
 
-<style scoped>
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
-}
-</style>
+    <v-main class="d-flex align-center justify-center">
+      <v-app-bar>
+        <Header />
+      </v-app-bar>
+      <RouterView />
+    </v-main>
+  </v-layout>
+</template>

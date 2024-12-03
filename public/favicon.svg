@@ -1,0 +1,6 @@
+<svg width="600" height="600" viewBox="0 0 600 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="600" width="600" height="600" rx="90" transform="rotate(90 600 0)" fill="#EEEEEE"/>
+<path d="M540 120L540 240L59.9999 240L59.9999 120L540 120Z" fill="#DD4B20"/>
+<path d="M240 120L360 120L360 360L240 360L240 120Z" fill="#2F7DC8"/>
+<path d="M540 360L540 480L60 480L60 360L540 360Z" fill="#FF882A"/>
+</svg>
